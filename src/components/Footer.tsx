@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import BigcapitalAlt from '../icons/BigcapitalAlt';
 // import Logo from '../Logo';
 
 /**
@@ -7,25 +8,27 @@ import Link from 'next/link';
  */
 function SocialWidget() {
   return (
-    <div className="footer__widget">
-      <strong className="footer__widget-title d-block">Socials</strong>
+    <div className="grow mb-[60px]">
+      <h5 className="text-white text-opacity-75 font-bold text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
+        Socials
+      </h5>
       <ul className="footer__widget-list">
-        <li>
+        <li className={'mb-2'}>
           <a target="_blank" href="https://discord.gg/c8nPBJafeb">
             Discord
           </a>
         </li>
-        <li>
+        <li className={'mb-2'}>
           <a target="_blank" href="https://twitter.com/BigcapitalHQ">
             Twitter
           </a>
         </li>
-        <li>
+        <li className={'mb-2'}>
           <a target="_blank" href="https://medium.com/bigcpaitalhq">
             Medium
           </a>
         </li>
-        <li>
+        <li className={'mb-2'}>
           <a target="_blank" href="https://medium.com/linkedin">
             LinkedIn
           </a>
@@ -37,16 +40,18 @@ function SocialWidget() {
 
 function CompanyWidget() {
   return (
-    <div className="mb-[60px]">
-      <strong className="footer__widget-title d-block">Legal</strong>
+    <div className="grow mb-[60px]">
+      <h5 className="text-white text-opacity-75 font-bold text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
+        Legal
+      </h5>
       <ul className="footer__widget-list">
-        <li>
+        <li className={'mb-2'}>
           <Link href={'/legal/terms-of-use'}>Terms & conditions</Link>
         </li>
-        <li>
+        <li className={'mb-2'}>
           <Link href={'/legal/privacy-policy'}>Privacy policy</Link>
         </li>
-        <li>
+        <li className={'mb-2'}>
           <a target="_blank" href="https://discord.gg/c8nPBJafeb">
             Contact Us
           </a>
@@ -58,10 +63,12 @@ function CompanyWidget() {
 
 function PagesWidget() {
   return (
-    <div className="footer__widget">
-      <strong className="footer__widget-title d-block">Content</strong>
+    <div className="grow mb-[60px]">
+      <h5 className="text-white text-opacity-75 font-bold text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
+        Content
+      </h5>
       <ul className="footer__widget-list">
-        <li>
+        <li className={'mb-2'}>
           <Link href={'/'}>Home</Link>
         </li>
         <li>
@@ -78,42 +85,38 @@ export default function Footer() {
   return (
     <div className="bg-[#000931] text-white text-opacity-65 pt-[50px]">
       <div className="container mx-auto px-4">
-        <div className="">
-          <div className="col-lg-3 col-md-4">
+        <div className="flex gap-20">
+          <div className="w-[25%]">
             <div className="footer__widget">
-              <a className="footer-logo d-block mt-1" href="#">
-                {/* <Logo /> */}
-              </a>
+              <div className="mt-1 mb-6">
+                <a href="#">
+                  <BigcapitalAlt fill="#fff" width={180} />
+                </a>
+              </div>
               <div className="footer-text mb-0 mt-3">
                 <p>
                   Online accounting software, built to automate business
                   financial processes.
                 </p>
-                <p>
+                <p className="mt-4">
                   <strong>Email</strong>: ahmed@bigcapital.ly
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="columns-3">
-            <div className="row">
-              <div className="col-lg-5 col-md-6 col-sm-6">
-                <PagesWidget />
-              </div>
-              <div className="col-lg-5 col-md-6 col-sm-6">
-                <CompanyWidget />
-              </div>
-              <div className="col-lg-2 col-md-6 col-sm-6">
-                <SocialWidget />
-              </div>
+          <div className="ml-auto w-[60%]">
+            <div className="flex flex-row flex-grow grow">
+              <PagesWidget />
+              <CompanyWidget />
+              <SocialWidget />
             </div>
           </div>
         </div>
       </div>
-      <div className="text-xs text-opacity-65 tracking-tight text-center">
-        <div className="container mx-auto px-4">
-          <div className="border-t border-opacity-20 pt-7 pb-7">
+      <div className="text-sm text-opacity-65 tracking-tight text-center ">
+        <div className="container mx-auto px-4 ">
+          <div className="border-t border-opacity-20 pt-7 pb-7 ">
             <p>Copyright © 2023 — Made by Bigcapital Technologies.</p>
           </div>
         </div>

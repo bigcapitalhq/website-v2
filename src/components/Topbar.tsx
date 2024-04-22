@@ -15,29 +15,40 @@ function NavItem({ children, className }: NavItemProps) {
 
 interface NavLinkProps {
   children: React.ReactNode;
+  href: string;
   className?: string;
+  target?: string;
 }
 
-function NavLink({ children, className }: NavLinkProps) {
+function NavLink({ children, href, target, className }: NavLinkProps) {
   return (
     <div
       className={clsx(
-        'h-[32px] px-[14px] weight-semibold leading-[32px]',
+        'h-[32px] px-[14px] font-medium leading-[32px]',
         className
       )}
     >
-      {children}
+      <Link href={href} passHref legacyBehavior>
+        <a href="#" target={target} className={'hover:text-indigo'}>
+          {children}
+        </a>
+      </Link>
     </div>
   );
+}
+
+interface TopBarProps {
+  beforeNavbar?: React.ReactNode;
+  afterNavbar?: React.ReactNode;
 }
 
 /**
  * Top navigation bar.
  */
-export function TopBar({ beforeNavbar, afterNavbar }) {
+export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
   return (
     // <ReactWOW animation="fadeIn" duration={'1s'}>
-    <div className="topbar" id="topbar">
+    <div className={'border border-[#f1f5f9]'}>
       {beforeNavbar}
 
       <div className="container mx-auto px-4 mx-auto">
@@ -52,7 +63,7 @@ export function TopBar({ beforeNavbar, afterNavbar }) {
 
           <div className={'flex flex-grow items-center'}>
             <div className="flex flex-row ml-auto">
-              <NavItem className={'topbar__start-item'}>
+              <NavItem className={'px-2'}>
                 <iframe
                   src="https://ghbtns.com/github-btn.html?user=bigcapitalhq&repo=bigcapital&type=star&size=large&count=true"
                   frameborder="0"
@@ -64,9 +75,7 @@ export function TopBar({ beforeNavbar, afterNavbar }) {
               </NavItem>
 
               <NavItem>
-                <NavLink to="/#features" as={Link}>
-                  Features
-                </NavLink>
+                <NavLink href="/blog">Blog</NavLink>
               </NavItem>
 
               <NavItem>
@@ -94,7 +103,7 @@ export function TopBar({ beforeNavbar, afterNavbar }) {
 
               <NavItem className={'d-none d-lg-block ml-4'}>
                 <NavLink
-                  className="bg-indigo h-[32px] rounded-full text-white"
+                  className="bg-indigo h-[32px] rounded-full text-white px-[24px]"
                   href={'https://app.bigcapital.ly/auth/register'}
                 >
                   Sign Up
@@ -103,8 +112,7 @@ export function TopBar({ beforeNavbar, afterNavbar }) {
 
               <div className="ml-4 d-lg-none">
                 <NavLink
-                  as={Link}
-                  to={'https://app.bigcapital.ly/'}
+                  href={'https://app.bigcapital.ly/'}
                   className="border border-1-blue rounded-full"
                 >
                   Sign In

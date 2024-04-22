@@ -12,7 +12,7 @@ export default function Page() {
         <div className="container lg-auto mx-auto px-4">
           <h1
             className={
-              'text-[50px] leading-[64px] font-bold text-blue-900 mx-auto mb-[10px] tracking-tighter text-center'
+              'text-[50px] leading-[64px] font-bold text-blue-900 mx-auto mb-[10px] tracking-tighter text-center max-w-[90%]'
             }
           >
             Online accounting software, built to automate business financial
@@ -21,7 +21,7 @@ export default function Page() {
 
           <h2
             className={
-              'text-[20px] font-normal text-blue-900 leading-8 mx-auto mb-[25px] text-center'
+              'text-[20px] font-normal text-blue-900 leading-8 mx-auto mb-[25px] text-center max-w-[80%]'
             }
           >
             Control your business bookkeeping with automated accounting, to run

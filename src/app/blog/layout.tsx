@@ -3,5 +3,5 @@ interface BlogLayoutProps {
 }
 
 export default function BlogLayout({ children }: BlogLayoutProps) {
-  return <div className={"max-w-[960px] mx-auto px-4"}>{children}</div>;
+  return <div className={"container mx-auto px-4 pt-10 pb-20"}>{children}</div>;
 }

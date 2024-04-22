@@ -27,9 +27,6 @@ function Feature({ icon, title, desc }: FeatureProps) {
   );
 }
 
-/**
- * Features section.
- */
 export function Features() {
   return (
     <div
@@ -37,14 +34,16 @@ export function Features() {
         'bg-[#06091d] pt-[420px] pb-[40px] text-white py-420 overflow-hidden'
       }
     >
-      <div>{/* <img src="blur/blur-2.jpeg" /> */}</div>
+      <div className="opacity-70 relative">
+        <img className="absolute -top-[900px] left-[1000px] scale-[1.8] z-[-1]" src="./blur-2.jpeg" alt="" />
+      </div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 z-1 relative">
         <h2 className="text-white font-extrabold text-[40px] mb-[60px]">
           Discover the features you need
         </h2>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4 ">
           <Feature
             icon={<PaymentSVG fill={'#fff'} />}
             title={'Sales & Purchases Invoicing'}

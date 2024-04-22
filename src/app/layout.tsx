@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { TopBar } from '@/components/Topbar';
+import { AnnouncementBar } from '@/components/AnnouncementBar';
+import Footer from '@/components/Footer';
 
 const inter = Inter({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
@@ -20,11 +22,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className + ' pt-[32px]'}>
         <header>
+          <AnnouncementBar />
           <TopBar />
         </header>
         {children}
+
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );
