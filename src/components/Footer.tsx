@@ -9,7 +9,7 @@ import BigcapitalAlt from '../icons/BigcapitalAlt';
 function SocialWidget() {
   return (
     <div className="grow mb-[60px]">
-      <h5 className="text-white text-opacity-75 font-bold text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
+      <h5 className="text-white/70 font-medium text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
         Socials
       </h5>
       <ul className="footer__widget-list">
@@ -41,7 +41,7 @@ function SocialWidget() {
 function CompanyWidget() {
   return (
     <div className="grow mb-[60px]">
-      <h5 className="text-white text-opacity-75 font-bold text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
+      <h5 className="text-white/70text-opacity-75 font-medium text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
         Legal
       </h5>
       <ul className="footer__widget-list">
@@ -64,7 +64,7 @@ function CompanyWidget() {
 function PagesWidget() {
   return (
     <div className="grow mb-[60px]">
-      <h5 className="text-white text-opacity-75 font-bold text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
+      <h5 className="text-white/70 font-medium text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
         Content
       </h5>
       <ul className="footer__widget-list">
@@ -114,9 +114,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-sm text-opacity-65 tracking-tight text-center ">
+      <div className="text-md text-white/50 tracking-tight text-center ">
         <div className="container mx-auto px-4 ">
-          <div className="border-t border-opacity-20 pt-7 pb-7 ">
+          <div className="border-t border-white/20 pt-7 pb-7 ">
             <p>Copyright © 2023 — Made by Bigcapital Technologies.</p>
           </div>
         </div>

@@ -22,18 +22,18 @@ interface NavLinkProps {
 
 function NavLink({ children, href, target, className }: NavLinkProps) {
   return (
-    <div
-      className={clsx(
-        'h-[32px] px-[14px] font-medium leading-[32px]',
-        className
-      )}
-    >
-      <Link href={href} passHref legacyBehavior>
-        <a href="#" target={target} className={'hover:text-indigo'}>
-          {children}
-        </a>
-      </Link>
-    </div>
+    <Link href={href} passHref legacyBehavior>
+      <a
+        href="#"
+        target={target}
+        className={clsx(
+          'inline-block h-[32px] px-[14px] font-medium leading-[32px] hover:text-indigo',
+          className
+        )}
+      >
+        {children}
+      </a>
+    </Link>
   );
 }
 
@@ -48,7 +48,7 @@ interface TopBarProps {
 export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
   return (
     // <ReactWOW animation="fadeIn" duration={'1s'}>
-    <div className={'border border-[#f1f5f9]'}>
+    <div className={''}>
       {beforeNavbar}
 
       <div className="container mx-auto px-4 mx-auto">
@@ -103,7 +103,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
 
               <NavItem className={'d-none d-lg-block ml-4'}>
                 <NavLink
-                  className="bg-indigo h-[32px] rounded-full text-white px-[24px]"
+                  className="bg-indigo h-[32px] rounded-full text-white px-[24px] hover:text-white"
                   href={'https://app.bigcapital.ly/auth/register'}
                 >
                   Sign Up
@@ -113,7 +113,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
               <div className="ml-4 d-lg-none">
                 <NavLink
                   href={'https://app.bigcapital.ly/'}
-                  className="border border-1-blue rounded-full"
+                  className="border border-1-darkblue-600 rounded-full hover:bg-darkblue-600 hover:text-white"
                 >
                   Sign In
                 </NavLink>

@@ -21,7 +21,7 @@ function Feature({ icon, title, desc }: FeatureProps) {
   return (
     <div className={'mb-[45px]'} data-slide-to="0">
       {icon && <div className={'mb-[20px]'}>{icon}</div>}
-      <h4 className="mb-4 font-semibold opacity-90 text-base">{title}</h4>
+      <h4 className="mb-4 font-semibold opacity-90 text-[20px]">{title}</h4>
       <p className={'opacity-60'}>{desc}</p>
     </div>
   );

@@ -4,6 +4,7 @@ import './globals.css';
 import { TopBar } from '@/components/Topbar';
 import { AnnouncementBar } from '@/components/AnnouncementBar';
 import Footer from '@/components/Footer';
+import { CTASection } from '@/components/CTA';
 
 const inter = Inter({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],

@@ -54,7 +54,7 @@ export function Post({ title, id }: PostProps) {
                   src="https://avatars.githubusercontent.com/u/2197422?v=4"
                 />
               </div>
-              <p className="text-sm font-normal text-slate-12">
+              <p className="text-sm font-normal text-darkblue-800">
                 Ahmed Bouhulia ·{' '}
               </p>
               <p className="text-sm font-normal text-[#6b7280]">
@@ -63,7 +63,7 @@ export function Post({ title, id }: PostProps) {
             </div>
           </div>
 
-          <h1 className="font-bold font-styling font-display mt-3 line-clamp-5 text-balance text-[28px] leading-tight text-xl leading-[130%] text-slate-12 tracking-tight">
+          <h1 className="font-bold font-styling font-display mt-3 line-clamp-5 text-balance text-[28px] leading-tight text-xl leading-[130%] text-darkblue-900 hover:text-indigo tracking-tight">
             {title}
           </h1>
 

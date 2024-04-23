@@ -33,7 +33,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
             key={index}
             onClick={() => goToIndex(index)}
             className={
-              'box-content w-10 h-1 pr-1 pl-1 cursor-pointer bg-white relative bg-transparent py-4 ' +
+              'box-content w-10 h-1 pr-1 pl-1 cursor-pointer relative bg-transparent py-4 ' +
               (currentIndex === index ? 'opacity-75' : 'opacity-30')
             }
           >
