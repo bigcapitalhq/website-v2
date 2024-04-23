@@ -21,7 +21,10 @@ const config: Config = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      indigo: '#345dec',
+      indigo: {
+        dark: '#1544e4',
+        DEFAULT: '#345dec',
+      },
       darkblue: {
         '50': '#e6e7f1',
         '100': '#ccd0e2',

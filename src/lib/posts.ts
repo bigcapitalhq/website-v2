@@ -10,10 +10,9 @@ import { getAvatar } from './avatar';
 // GET THE PATH OF THE POSTS FOLDER
 const postsDirectory = path.join(process.cwd(), 'public/blog'); // process.cwd() returns the absolute path of the current working directory
 
-
 const formatDate = (date: string) => {
   return dayjs(date).format('MMMM DD, YYYY');
-}
+};
 // -------------------------------------------------
 // GET THE DATA OF ALL POSTS IN SORTED ORDER BY DATE
 /*

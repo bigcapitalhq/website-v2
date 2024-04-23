@@ -10,7 +10,7 @@ export function CTASection() {
 
         <div className="text-center mt-6">
           <a
-            className="inline-block h-[44px] text-lg leading-[44px] rounded-full px-10 bg-indigo text-white"
+            className="inline-block h-[44px] text-lg leading-[44px] rounded-full px-10 bg-indigo text-white hover:bg-indigo-dark"
             href="#"
           >
             Start Accounting

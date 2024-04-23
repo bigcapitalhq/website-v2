@@ -1,0 +1,31 @@
+
+.content p{
+  @apply mb-4;
+}
+
+.content ul {
+  @apply mb-4;
+  list-style: disc;
+  margin-left: 1.2rem;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    @apply font-bold mt-5 mb-5 text-[#515671];
+}
+
+.content h1{
+    @apply text-3xl;    
+}
+
+.content h2 {
+    @apply text-2xl
+}
+
+.content h3 {
+    @apply text-xl
+}

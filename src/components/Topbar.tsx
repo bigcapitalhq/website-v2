@@ -103,7 +103,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
 
               <NavItem className={'d-none d-lg-block ml-4'}>
                 <NavLink
-                  className="bg-indigo h-[32px] rounded-full text-white px-[24px] hover:text-white"
+                  className="bg-indigo h-[32px] rounded-full text-white px-[24px] hover:text-white hover:bg-indigo-dark"
                   href={'https://app.bigcapital.ly/auth/register'}
                 >
                   Sign Up

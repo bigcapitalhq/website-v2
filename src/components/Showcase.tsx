@@ -94,7 +94,7 @@ function ShowcaseBrowser({ children }: ShowcaseBrowserProps) {
 
 export function Showcase() {
   return (
-    <div className="z-10 relative" id="showcase">
+    <div className="z-10 relative animate__animated animate__fadeIn" id="showcase">
       <div className="ml-auto mr-auto max-w-[1220px]">
         <div className="pb-10 w-full relative mb-[-360px]">
           <ShowcaseCarousel />

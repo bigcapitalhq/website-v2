@@ -7,8 +7,7 @@ import ReactWOW from 'react-wow';
  */
 export default function Page() {
   return (
-    // <ReactWOW animation="fadeIn" duration={'1s'}>
-    <div className={'text-center py-[80px]'} id="intro">
+    <div className={'text-center py-[80px] animate__animated animate__fadeIn'} id="intro">
       <div className="container lg-auto mx-auto px-4">
         <h1
           className={
@@ -31,7 +30,7 @@ export default function Page() {
         <div className={'text-center flex gap-4 justify-center'}>
           <Link
             className={
-              'inline-block h-[44px] text-lg leading-[44px] rounded-full px-5 bg-indigo text-white'
+              'inline-block h-[44px] text-lg leading-[44px] rounded-full px-5 bg-indigo text-white hover:bg-indigo-dark'
             }
             href="https://app.bigcapital.ly/auth/register"
           >
@@ -50,6 +49,5 @@ export default function Page() {
         </div>
       </div>
     </div>
-    // </ReactWOW>
   );
 }
