@@ -11,7 +11,6 @@ export default function Home() {
       <Showcase />
       <Features />
       <CTASection />
-      
     </main>
   );
 }

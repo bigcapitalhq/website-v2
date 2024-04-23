@@ -3,11 +3,17 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import dayjs from 'dayjs';
+import { getAvatar } from './avatar';
 
 // --------------------------------
 // GET THE PATH OF THE POSTS FOLDER
 const postsDirectory = path.join(process.cwd(), 'public/blog'); // process.cwd() returns the absolute path of the current working directory
 
+
+const formatDate = (date: string) => {
+  return dayjs(date).format('MMMM DD, YYYY');
+}
 // -------------------------------------------------
 // GET THE DATA OF ALL POSTS IN SORTED ORDER BY DATE
 /*
@@ -43,10 +49,20 @@ export function getSortedPostsData() {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
 
+    const avatar = getAvatar(matterResult.data?.authorEmail);
+    const formattedDate = formatDate(matterResult.data?.date);
+
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string }),
+      ...(matterResult.data as {
+        date: string;
+        title: string;
+        subtitle: string;
+        picture: string;
+      }),
+      avatar,
+      formattedDate,
     };
   });
 
@@ -107,10 +123,23 @@ export async function getPostData(id: string) {
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
+  const avatar = getAvatar(matterResult.data?.authorEmail);
+
+  const formattedDate = formatDate(matterResult.data?.date);
+
   // Combine the data with the id
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string }),
+    avatar,
+    formattedDate,
+    ...(matterResult.data as {
+      date: string;
+      title: string;
+      subtitle: string;
+      author: string;
+      authoriEmail: string;
+      picture: string;
+    }),
   };
 }

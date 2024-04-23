@@ -1,53 +1,11 @@
 'use client';
 import Image from 'next/image';
-import React, { useState } from 'react';
-
-interface CarouselProps {
-  items: JSX.Element[];
-}
-
-const Carousel: React.FC<CarouselProps> = ({ items }) => {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-
-  const goToIndex = (index: number): void => {
-    setCurrentIndex(index);
-  };
-
-  return (
-    <div className="">
-      <div className="carousel-inner">
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className={`carousel-item ${
-              index === currentIndex ? 'block' : 'hidden'
-            }`}
-          >
-            {item}
-          </div>
-        ))}
-      </div>
-      <div className="absolute z-[15] flex justify-center mx-[15%] bottom-0 inset-x-0">
-        {items.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToIndex(index)}
-            className={
-              'box-content w-10 h-1 pr-1 pl-1 cursor-pointer relative bg-transparent py-4 ' +
-              (currentIndex === index ? 'opacity-75' : 'opacity-30')
-            }
-          >
-            <span className="block w-full h-full rounded-sm bg-white"></span>
-          </button>
-        ))}
-      </div>
-    </div>
-  );
-};
+import React from 'react';
+import { Carousel } from './Carousel';
 
 function ShowcaseCarousel() {
-  const carouselItems = [
-    <div key={1}>
+  return (
+    <Carousel>
       <ShowcaseBrowser>
         <Image
           src="/showcase/showcase-3.png"
@@ -56,8 +14,7 @@ function ShowcaseCarousel() {
           height="845"
         />
       </ShowcaseBrowser>
-    </div>,
-    <div key={2}>
+
       <ShowcaseBrowser>
         <Image
           src="/showcase/showcase-10.png"
@@ -66,8 +23,7 @@ function ShowcaseCarousel() {
           height="845"
         />
       </ShowcaseBrowser>
-    </div>,
-    <div key={3}>
+
       <ShowcaseBrowser>
         <Image
           src="/showcase/showcase-4.png"
@@ -76,8 +32,6 @@ function ShowcaseCarousel() {
           height="845"
         />
       </ShowcaseBrowser>
-    </div>,
-    <div key={4}>
       <ShowcaseBrowser>
         <Image
           src="/showcase/showcase-5.png"
@@ -86,8 +40,6 @@ function ShowcaseCarousel() {
           height="845"
         />
       </ShowcaseBrowser>
-    </div>,
-    <div key={5}>
       <ShowcaseBrowser>
         <Image
           src="/showcase/showcase-6.png"
@@ -96,8 +48,6 @@ function ShowcaseCarousel() {
           height="845"
         />
       </ShowcaseBrowser>
-    </div>,
-    <div key={6}>
       <ShowcaseBrowser>
         <Image
           src="/showcase/showcase-7.png"
@@ -106,10 +56,8 @@ function ShowcaseCarousel() {
           height="845"
         />
       </ShowcaseBrowser>
-    </div>,
-  ];
-
-  return <Carousel items={[...carouselItems]} />;
+    </Carousel>
+  );
 }
 
 interface ShowcaseBrowserProps {
