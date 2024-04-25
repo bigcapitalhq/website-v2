@@ -1,6 +1,6 @@
 export function AnnouncementBar() {
   return (
-    <div className="fixed bg-[#2d72d2] h-[32px] top-0 left-0 right-0 bg-blue-600 text-white px-4 flex items-center justify-center z-50 text-sm">
+    <div className="hidden fixed bg-[#2d72d2] h-[32px] top-0 left-0 right-0 bg-blue-600 text-white px-4 md:flex items-center justify-center z-50 text-sm">
       <span className="bg-[#00cfb7] px-[6px] py-[2px] rounded-md text-black text-xs mr-3">
         New
       </span>

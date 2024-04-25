@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactWOW from 'react-wow';
-import Logo from '../icons/Bigcapital';
+'use client';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import clsx from 'classNames';
+import Logo from '../icons/Bigcapital';
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -27,7 +27,50 @@ function NavLink({ children, href, target, className }: NavLinkProps) {
         href="#"
         target={target}
         className={clsx(
-          'inline-block h-[32px] px-[14px] font-medium leading-[32px] hover:text-indigo',
+          'inline-block md:h-[32px] md:leading-[32px] md:px-[14px] font-medium  hover:text-indigo border-b-[rgba(24,34,77,0.15)] border-b border-solid md:border-0 w-full h-[45px] leading-[45px]',
+          className
+        )}
+      >
+        {children}
+      </a>
+    </Link>
+  );
+}
+
+interface NavButtonProps {
+  variant?: 'solid' | 'outline';
+  children: React.ReactNode;
+  href: string;
+  className?: string;
+  target?: string;
+}
+
+function NavButton({
+  variant = 'solid',
+  children,
+  href,
+  target,
+  className,
+}: NavButtonProps) {
+  const commonStyle =
+    'inline-block md:h-[32px] md:leading-[32px] h-[45px] leading-[45px] px-[14px] font-medium  rounded-full w-full';
+  const outlineStyle =
+    'hover:text-indigo border border-1-darkblue-600  hover:bg-darkblue-600 hover:text-white';
+
+  const solidStyle =
+    'bg-indigo text-white md:px-[14px] font-medium border-b-[rgba(24,34,77,0.15)] border-b border-solid md:border-0 ';
+
+  return (
+    <Link href={href} passHref legacyBehavior>
+      <a
+        href="#"
+        target={target}
+        className={clsx(
+          {
+            [outlineStyle]: variant === 'outline',
+            [solidStyle]: variant === 'solid',
+          },
+          commonStyle,
           className
         )}
       >
@@ -46,24 +89,35 @@ interface TopBarProps {
  * Top navigation bar.
  */
 export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
+  const [toggle, setToggle] = useState<boolean>(false);
+
   return (
-    // <ReactWOW animation="fadeIn" duration={'1s'}>
     <div className={''}>
       {beforeNavbar}
 
-      <div className="container mx-auto px-4 mx-auto">
-        <div className={'py-[14px] flex flex-nowrap'}>
-          <div className={'py-[5px]'}>
-            <Link href={'/'}>
-              <Logo width={200} />
-            </Link>
+      <div className="lg:container mx-auto px-4 mx-auto">
+        <div className={'py-[14px] md:flex md:flex-nowrap'}>
+          <div className={'flex md:block'}>
+            <div className={'py-[5px]'}>
+              <Link href={'/'}>
+                <Logo width={200} />
+              </Link>
+            </div>
+
+            <NavbarToggle onClick={() => setToggle(!toggle)} />
           </div>
 
-          {/* <Navbar.Toggle /> */}
-
-          <div className={'flex flex-grow items-center'}>
-            <div className="flex flex-row ml-auto">
-              <NavItem className={'px-2'}>
+          <div
+            className={clsx(
+              'pt-6 md:pt-0 md:flex flex-grow items-center md:block',
+              {
+                hidden: !toggle,
+                block: toggle,
+              }
+            )}
+          >
+            <div className="flex flex-col md:flex-row ml-auto items-stretch md:items-center">
+              <NavItem className={'pb-2 md:pb-0'}>
                 <iframe
                   src="https://ghbtns.com/github-btn.html?user=bigcapitalhq&repo=bigcapital&type=star&size=large&count=true"
                   frameborder="0"
@@ -90,7 +144,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
                 </NavLink>
               </NavItem>
 
-              <div className="w-[1px] bg-[#bec3d5] mr-1 ml-1"></div>
+              <div className="hidden md:block w-[1px] h-[36px] bg-[#bec3d5] mx-1 my-auto"></div>
               {/* 
               <NavItem className={'d-none d-lg-block'}>
                 <a
@@ -101,22 +155,16 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
                 </a>
               </NavItem> */}
 
-              <NavItem className={'d-none d-lg-block ml-4'}>
-                <NavLink
-                  className="bg-indigo h-[32px] rounded-full text-white px-[24px] hover:text-white hover:bg-indigo-dark"
-                  href={'https://app.bigcapital.ly/auth/register'}
-                >
+              <NavItem className={'hidden md:block md:ml-4'}>
+                <NavButton className={'px-6'} variant={'solid'} href={'https://app.bigcapital.ly/auth/register'}>
                   Sign Up
-                </NavLink>
+                </NavButton>
               </NavItem>
 
-              <div className="ml-4 d-lg-none">
-                <NavLink
-                  href={'https://app.bigcapital.ly/'}
-                  className="border border-1-darkblue-600 rounded-full hover:bg-darkblue-600 hover:text-white"
-                >
+              <div className="hidden md:block md:ml-4 d-lg-none">
+                <NavButton variant={'outline'} href={'https://app.bigcapital.ly/'}>
                   Sign In
-                </NavLink>
+                </NavButton>
               </div>
             </div>
           </div>
@@ -124,6 +172,20 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
       </div>
       {afterNavbar}
     </div>
-    // </ReactWOW>
+  );
+}
+
+interface NavbarToggleProps extends React.HTMLProps<HTMLButtonElement> {}
+
+function NavbarToggle(props: NavbarToggleProps) {
+  return (
+    <button
+      aria-label="Toggle navigation"
+      className="bg-hamburger bg-no-repeat bg-center block md:hidden ml-auto text-xl leading-none bg-transparent border rounded px-3 py-1 border-solid border-transparent"
+      {...props}
+      type={'button'}
+    >
+      <span className={`inline-block w-[1.5em] h-[1.5em] align-middle`}></span>
+    </button>
   );
 }

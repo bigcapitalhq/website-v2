@@ -19,7 +19,7 @@ interface FeatureProps {
  */
 function Feature({ icon, title, desc }: FeatureProps) {
   return (
-    <div className={'mb-[45px]'} data-slide-to="0">
+    <div data-slide-to="0">
       {icon && <div className={'mb-[20px]'}>{icon}</div>}
       <h4 className="mb-4 font-semibold opacity-90 text-[20px]">{title}</h4>
       <p className={'opacity-60'}>{desc}</p>
@@ -39,11 +39,11 @@ export function Features() {
       </div>
 
       <div className="container mx-auto px-4 z-1 relative">
-        <h2 className="text-white font-extrabold text-[40px] mb-[60px]">
+        <h2 className="text-white font-extrabold text-[30px] mb-[30px] md:text-[40px] md:mb-[60px]">
           Discover the features you need
         </h2>
 
-        <div className="grid grid-cols-3 gap-4 ">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] md:gap-[45px]">
           <Feature
             icon={<PaymentSVG fill={'#fff'} />}
             title={'Sales & Purchases Invoicing'}

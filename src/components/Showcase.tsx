@@ -63,11 +63,14 @@ function ShowcaseCarousel() {
 interface ShowcaseBrowserProps {
   children: React.ReactNode;
 }
+// width: 950px;
+        // padding-left: 10px;
+        // padding-right: 10px;
 
 function ShowcaseBrowser({ children }: ShowcaseBrowserProps) {
   return (
-    <div className="pl-3.5 pr-3.5">
-      <div className={'flex h-4 rounded-t-lg bg-[#6d7688]'}>
+    <div className="pl-3.5 pr-3.5 w-[950px] md:w-full px-[10px] md:px[15px]">
+      <div className={'flex h-[18px] rounded-t-lg bg-[#6d7688]'}>
         <div className={'flex ml-4 gap-2'}>
           <span
             className={
@@ -87,7 +90,7 @@ function ShowcaseBrowser({ children }: ShowcaseBrowserProps) {
         </div>
       </div>
 
-      <div className={'min-h-[720px]'}>{children}</div>
+      <div className={'min-h-[600px]'}>{children}</div>
     </div>
   );
 }
@@ -96,7 +99,7 @@ export function Showcase() {
   return (
     <div className="z-10 relative animate__animated animate__fadeIn" id="showcase">
       <div className="ml-auto mr-auto max-w-[1220px]">
-        <div className="pb-10 w-full relative mb-[-360px]">
+        <div className="pb-10 w-full relative mb-[-360px] overflow-hidden">
           <ShowcaseCarousel />
         </div>
       </div>

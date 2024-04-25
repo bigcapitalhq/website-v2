@@ -8,7 +8,7 @@ import BigcapitalAlt from '../icons/BigcapitalAlt';
  */
 function SocialWidget() {
   return (
-    <div className="grow mb-[60px]">
+    <div className="grow mb-[40px] md:mb-[60px]">
       <h5 className="text-white/70 font-medium text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
         Socials
       </h5>
@@ -40,7 +40,7 @@ function SocialWidget() {
 
 function CompanyWidget() {
   return (
-    <div className="grow mb-[60px]">
+    <div className="grow mb-[40px] md:mb-[60px]">
       <h5 className="text-white/70text-opacity-75 font-medium text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
         Legal
       </h5>
@@ -63,7 +63,7 @@ function CompanyWidget() {
 
 function PagesWidget() {
   return (
-    <div className="grow mb-[60px]">
+    <div className="grow mb-[40px] md:mb-[60px]">
       <h5 className="text-white/70 font-medium text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
         Content
       </h5>
@@ -83,14 +83,14 @@ function PagesWidget() {
 
 export default function Footer() {
   return (
-    <div className="bg-[#000931] text-white text-opacity-65 pt-[50px]">
+    <div className="bg-[#000931] text-white text-opacity-65 pt-[50px] text-center md:text-left">
       <div className="container mx-auto px-4">
-        <div className="flex gap-20">
-          <div className="w-[25%]">
-            <div className="footer__widget">
+        <div className="flex flex-col md:flex-row gap-2 md:gap-20">
+          <div className="w-full lg:w-[25%]">
+            <div className="mb-[40px] md:mb-[60px]">
               <div className="mt-1 mb-6">
                 <a href="#">
-                  <BigcapitalAlt fill="#fff" width={180} />
+                  <BigcapitalAlt fill="#fff" width={180} className={'inline'} />
                 </a>
               </div>
               <div className="footer-text mb-0 mt-3">
@@ -105,8 +105,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="ml-auto w-[60%]">
-            <div className="flex flex-row flex-grow grow">
+          <div className="ml-auto w-full lg:w-[60%]">
+            <div className="flex flex-col md:flex-row flex-grow grow">
               <PagesWidget />
               <CompanyWidget />
               <SocialWidget />
@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-md text-white/50 tracking-tight text-center ">
-        <div className="container mx-auto px-4 ">
+        <div className="container mx-auto px-4.5">
           <div className="border-t border-white/20 pt-7 pb-7 ">
             <p>Copyright © 2023 — Made by Bigcapital Technologies.</p>
           </div>

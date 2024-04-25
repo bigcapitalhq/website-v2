@@ -24,12 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
       </head>
-      <body className={inter.className + ' pt-[32px]'}>
+      <body className={inter.className + ' md:pt-[32px]'}>
         <header>
           <AnnouncementBar />
           <TopBar />
@@ -39,6 +40,14 @@ export default function RootLayout({
         <footer>
           <Footer />
         </footer>
+
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="//js-eu1.hs-scripts.com/144560187.js"
+        ></script>
       </body>
     </html>
   );

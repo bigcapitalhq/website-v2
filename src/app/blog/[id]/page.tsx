@@ -26,7 +26,7 @@ export default async function Page(params: Params) {
       <div>
         <h1
           className={
-            'font-extrabold font-styling font-display mt-1.5 mb-2.5 text-center text-[2.2rem] md:text-[2.2rem] tracking-tight leading-[120%] text-[#242c51] animate__animated animate__fadeIn'
+            'font-extrabold font-styling font-display mt-1.5 mb-2.5 text-center text-[2rem] md:text-[2.2rem] tracking-tight leading-[120%] text-[#242c51] animate__animated animate__fadeIn'
           }
         >
           {postData.title}

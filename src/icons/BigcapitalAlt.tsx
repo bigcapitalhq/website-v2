@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function BigcapitalAlt({ width, height, fill }) {
+export default function BigcapitalAlt({ width, height, fill, className }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +8,7 @@ export default function BigcapitalAlt({ width, height, fill }) {
       width={width}
       height={height}
       fill={fill}
-      className={'bigcapital'}
+      className={className}
     >
       <path
         fill="currentColor"

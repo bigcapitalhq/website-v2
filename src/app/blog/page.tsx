@@ -15,7 +15,7 @@ function Posts() {
   return (
     <div>
       <h1 className={'mb-10 text-3xl font-semibold'}>Blog</h1>
-      <div className={'columns-2 gap-6'}>
+      <div className={'grid md:grid-cols-2 gap-6'}>
         {posts.map((post, index) => (
           <Post
             key={index}
