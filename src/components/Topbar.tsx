@@ -27,7 +27,7 @@ function NavLink({ children, href, target, className }: NavLinkProps) {
         href="#"
         target={target}
         className={clsx(
-          'inline-block md:h-[32px] md:leading-[32px] md:px-[14px] font-medium  hover:text-indigo border-b-[rgba(24,34,77,0.15)] border-b border-solid md:border-0 w-full h-[45px] leading-[45px]',
+          'inline-block lg:h-[32px] lg:leading-[32px] lg:px-[14px] font-medium  hover:text-indigo border-b-[rgba(24,34,77,0.15)] border-b border-solid lg:border-0 w-full h-[45px] leading-[45px]',
           className
         )}
       >
@@ -53,12 +53,12 @@ function NavButton({
   className,
 }: NavButtonProps) {
   const commonStyle =
-    'inline-block md:h-[32px] md:leading-[32px] h-[45px] leading-[45px] px-[14px] font-medium  rounded-full w-full';
+    'inline-block lg:h-[32px] lg:leading-[32px] h-[45px] leading-[45px] px-[14px] font-medium  rounded-full w-full';
   const outlineStyle =
     'hover:text-indigo border border-1-darkblue-600  hover:bg-darkblue-600 hover:text-white';
 
   const solidStyle =
-    'bg-indigo text-white md:px-[14px] font-medium border-b-[rgba(24,34,77,0.15)] border-b border-solid md:border-0 ';
+    'bg-indigo text-white lg:px-[14px] font-medium border-b-[rgba(24,34,77,0.15)] border-b border-solid lg:border-0 ';
 
   return (
     <Link href={href} passHref legacyBehavior>
@@ -91,13 +91,22 @@ interface TopBarProps {
 export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
   const [toggle, setToggle] = useState<boolean>(false);
 
+  const handleLinkClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    // Check if the clicked element is a link
+    const target = event.target as HTMLElement;
+    if (target.tagName === 'A') {
+      // Change the state when a link is clicked
+      setToggle(false);
+    }
+  };
+
   return (
-    <div className={''}>
+    <div onClick={handleLinkClick}>
       {beforeNavbar}
 
-      <div className="lg:container mx-auto px-4 mx-auto">
-        <div className={'py-[14px] md:flex md:flex-nowrap'}>
-          <div className={'flex md:block'}>
+      <div className="xl:container mx-auto px-4 mx-auto">
+        <div className={'py-[14px] lg:flex lg:flex-nowrap'}>
+          <div className={'flex lg:block'}>
             <div className={'py-[5px]'}>
               <Link href={'/'}>
                 <Logo width={200} />
@@ -109,15 +118,15 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
 
           <div
             className={clsx(
-              'pt-6 md:pt-0 md:flex flex-grow items-center md:block',
+              'pt-6 lg:pt-0 lg:flex flex-grow items-center lg:block',
               {
                 hidden: !toggle,
                 block: toggle,
               }
             )}
           >
-            <div className="flex flex-col md:flex-row ml-auto items-stretch md:items-center">
-              <NavItem className={'pb-2 md:pb-0'}>
+            <div className="flex flex-col lg:flex-row ml-auto items-stretch lg:items-center">
+              <NavItem className={'pb-2 lg:pb-0'}>
                 <iframe
                   src="https://ghbtns.com/github-btn.html?user=bigcapitalhq&repo=bigcapital&type=star&size=large&count=true"
                   frameborder="0"
@@ -144,7 +153,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
                 </NavLink>
               </NavItem>
 
-              <div className="hidden md:block w-[1px] h-[36px] bg-[#bec3d5] mx-1 my-auto"></div>
+              <div className="hidden lg:block w-[1px] h-[36px] bg-[#bec3d5] mx-1 my-auto"></div>
               {/* 
               <NavItem className={'d-none d-lg-block'}>
                 <a
@@ -155,14 +164,21 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
                 </a>
               </NavItem> */}
 
-              <NavItem className={'hidden md:block md:ml-4'}>
-                <NavButton className={'px-6'} variant={'solid'} href={'https://app.bigcapital.ly/auth/register'}>
+              <NavItem className={'hidden lg:block lg:ml-4'}>
+                <NavButton
+                  className={'px-6'}
+                  variant={'solid'}
+                  href={'https://app.bigcapital.ly/auth/register'}
+                >
                   Sign Up
                 </NavButton>
               </NavItem>
 
-              <div className="hidden md:block md:ml-4 d-lg-none">
-                <NavButton variant={'outline'} href={'https://app.bigcapital.ly/'}>
+              <div className="hidden lg:block lg:ml-4 d-lg-none">
+                <NavButton
+                  variant={'outline'}
+                  href={'https://app.bigcapital.ly/'}
+                >
                   Sign In
                 </NavButton>
               </div>
@@ -181,7 +197,7 @@ function NavbarToggle(props: NavbarToggleProps) {
   return (
     <button
       aria-label="Toggle navigation"
-      className="bg-hamburger bg-no-repeat bg-center block md:hidden ml-auto text-xl leading-none bg-transparent border rounded px-3 py-1 border-solid border-transparent"
+      className="bg-hamburger bg-no-repeat bg-center block lg:hidden ml-auto text-xl leading-none bg-transparent border rounded px-3 py-1 border-solid border-transparent"
       {...props}
       type={'button'}
     >
