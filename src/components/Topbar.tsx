@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import clsx from 'classNames';
+import clsx from 'classnames';
 import Logo from '../icons/Bigcapital';
 
 interface NavItemProps {
