@@ -4,8 +4,9 @@ export function AnnouncementBar() {
       <span className="bg-[#00cfb7] px-[6px] py-[2px] rounded-md text-black text-xs mr-3">
         New
       </span>
-      We've launched the Bigcapital Cloud, the 200 early adopter subscribers
-      will get all the features and unlimited users.{' '}
+      {
+        "We've launched the Bigcapital Cloud, the 200 early adopter subscribers will get all the features and unlimited users. "
+      }
       <a
         className={
           'bg-white px-[6px] py-[2px] rounded-md inline-block text-black leading-none text-[13px] ml-4 hover:underline'

@@ -1,7 +1,7 @@
-import { getPostData, getSortedPostsData } from '@/lib/posts';
+import { getSortedPostsData } from '@/lib/posts';
 import Image from 'next/image';
 
-export default function Page() {
+export default function BlogPage() {
   return (
     <div>
       <Posts />
@@ -41,7 +41,7 @@ interface PostProps {
   formattedDate: string;
 }
 
-export function Post({
+function Post({
   title,
   subtitle,
   id,
@@ -80,7 +80,7 @@ export function Post({
                 Ahmed Bouhulia ·{' '}
               </p>
               <p className="text-sm font-normal text-[#6b7280]">
-                <time datetime="2024-04-11">{formattedDate}</time>
+                <time dateTime="2024-04-11">{formattedDate}</time>
               </p>
             </div>
           </div>

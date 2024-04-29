@@ -129,7 +129,6 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
               <NavItem className={'pb-2 lg:pb-0'}>
                 <iframe
                   src="https://ghbtns.com/github-btn.html?user=bigcapitalhq&repo=bigcapital&type=star&size=large&count=true"
-                  frameborder="0"
                   scrolling="0"
                   width="150"
                   height="30"

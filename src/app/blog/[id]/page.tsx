@@ -2,15 +2,7 @@ import { getPostData } from '@/lib/posts';
 import Image from 'next/image';
 import './page.css';
 
-type Params = {
-  id: string;
-};
-
-type Props = {
-  params: Params;
-};
-
-export default async function Page(params: Params) {
+export default async function Page() {
   const postData = await getPostData('ssg-ssr');
 
   return (
