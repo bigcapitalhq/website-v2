@@ -71,9 +71,16 @@ function PagesWidget() {
         <li className={'mb-2'}>
           <Link href={'/'}>Home</Link>
         </li>
-        <li>
+
+        <li className={'mb-2'}>
           <a target="_blank" href="https://docs.bigcapital.ly">
             Documentation
+          </a>
+        </li>
+
+        <li>
+          <a target={'_blank'} href={'https://bigcapital.statuspage.io/'}>
+            Status
           </a>
         </li>
       </ul>

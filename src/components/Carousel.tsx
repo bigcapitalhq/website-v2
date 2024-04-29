@@ -57,7 +57,7 @@ export const Carousel: React.FC<CarouselProps> = ({
             key={index}
             onClick={() => goToIndex(index)}
             className={
-              'box-content w-10 h-1.5 pr-1 pl-1 cursor-pointer relative bg-transparent py-4 ' +
+              'box-content w-10 h-[5px] pr-1 pl-1 cursor-pointer relative bg-transparent py-4 ' +
               (currentIndex === index ? 'opacity-75' : 'opacity-30')
             }
           >

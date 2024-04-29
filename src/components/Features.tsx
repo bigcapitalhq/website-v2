@@ -30,16 +30,21 @@ function Feature({ icon, title, desc }: FeatureProps) {
 export function Features() {
   return (
     <div
+      id={'features'}
       className={
-        'bg-[#06091d] pt-[420px] pb-[40px] text-white py-420 overflow-hidden'
+        'bg-[#06091d] pt-[420px] pb-[40px] md:pb-[60px] text-white py-420 overflow-hidden'
       }
     >
       <div className="opacity-70 relative">
-        <img className="absolute -top-[900px] left-[1000px] scale-[1.8] z-[-1]" src="./blur-2.jpeg" alt="" />
+        <img
+          className="absolute -top-[900px] left-[1000px] scale-[1.8] z-[-1]"
+          src="./blur-2.jpeg"
+          alt=""
+        />
       </div>
 
       <div className="container mx-auto px-4 z-1 relative">
-        <h2 className="text-white font-extrabold text-[30px] mb-[30px] md:text-[40px] md:mb-[60px]">
+        <h2 className="text-white font-extrabold text-[30px] leading-tight mb-[30px] md:text-[40px] md:mb-[60px]">
           Discover the features you need
         </h2>
 

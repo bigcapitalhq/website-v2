@@ -63,13 +63,9 @@ function ShowcaseCarousel() {
 interface ShowcaseBrowserProps {
   children: React.ReactNode;
 }
-// width: 950px;
-        // padding-left: 10px;
-        // padding-right: 10px;
-
 function ShowcaseBrowser({ children }: ShowcaseBrowserProps) {
   return (
-    <div className="pl-3.5 pr-3.5 w-[950px] md:w-full px-[10px] md:px[15px]">
+    <div className="w-[950px] md:w-full px-[10px] md:px-[15px]">
       <div className={'flex h-[18px] rounded-t-lg bg-[#6d7688]'}>
         <div className={'flex ml-4 gap-2'}>
           <span
@@ -90,14 +86,25 @@ function ShowcaseBrowser({ children }: ShowcaseBrowserProps) {
         </div>
       </div>
 
-      <div className={'min-h-[600px]'}>{children}</div>
+      <div className={'relative'}>
+        <div className={'absolute'}>{children}</div>
+        <div>
+          <img
+            alt=""
+            role="presentation"
+            aria-hidden="true"
+            src="data:image/svg+xml;charset=utf-8,%3Csvg height='758' width='1262' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+            className={'max-w-full block relative bg-white -z-10'}
+          />
+        </div>
+      </div>
     </div>
   );
 }
 
 export function Showcase() {
   return (
-    <div className="z-10 relative animate__animated animate__fadeIn" id="showcase">
+    <div className="z-10 relative" id="showcase">
       <div className="ml-auto mr-auto max-w-[1220px]">
         <div className="pb-10 w-full relative mb-[-360px] overflow-hidden">
           <ShowcaseCarousel />

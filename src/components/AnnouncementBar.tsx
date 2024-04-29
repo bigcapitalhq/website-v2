@@ -8,7 +8,7 @@ export function AnnouncementBar() {
       will get all the features and unlimited users.{' '}
       <a
         className={
-          'bg-white px-[6px] py-[3px] rounded-md inline-block text-black leading-none text-sm ml-4 hover:underline'
+          'bg-white px-[6px] py-[2px] rounded-md inline-block text-black leading-none text-[13px] ml-4 hover:underline'
         }
         href="https://app.bigcapital.ly/auth/register"
       >

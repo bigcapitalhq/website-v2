@@ -138,7 +138,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
               </NavItem>
 
               <NavItem>
-                <NavLink href="/blog">Blog</NavLink>
+                <NavLink href="#features">Features</NavLink>
               </NavItem>
 
               <NavItem>
@@ -197,7 +197,7 @@ function NavbarToggle(props: NavbarToggleProps) {
   return (
     <button
       aria-label="Toggle navigation"
-      className="bg-hamburger bg-no-repeat bg-center block lg:hidden ml-auto text-xl leading-none bg-transparent border rounded px-3 py-1 border-solid border-transparent"
+      className="bg-hamburger bg-no-repeat bg-center block relative right-[-10px] lg:hidden ml-auto text-xl leading-none bg-transparent border rounded px-3 py-1 border-solid border-transparent"
       {...props}
       type={'button'}
     >
