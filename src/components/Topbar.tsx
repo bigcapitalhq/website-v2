@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import clsx from 'classnames';
 import Logo from '../icons/Bigcapital';
+import { AppUrl } from '@/constants';
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -167,17 +168,14 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
                 <NavButton
                   className={'px-6'}
                   variant={'solid'}
-                  href={'https://app.bigcapital.ly/auth/register'}
+                  href={AppUrl.SignUp}
                 >
                   Sign Up
                 </NavButton>
               </NavItem>
 
               <div className="hidden lg:block lg:ml-4 d-lg-none">
-                <NavButton
-                  variant={'outline'}
-                  href={'https://app.bigcapital.ly/'}
-                >
+                <NavButton variant={'outline'} href={AppUrl.SignIn}>
                   Sign In
                 </NavButton>
               </div>

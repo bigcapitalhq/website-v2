@@ -1,3 +1,4 @@
+import { AppUrl } from '@/constants';
 import React from 'react';
 
 export function CTASection() {
@@ -11,7 +12,7 @@ export function CTASection() {
         <div className="text-center mt-4 md:mt-6">
           <a
             className="w-full md:w-auto inline-block h-[44px] text-lg leading-[44px] rounded-full px-10 bg-indigo text-white hover:bg-indigo-dark"
-            href="https://app.bigcapital.ly/auth/register"
+            href={AppUrl.SignUp}
           >
             Start Accounting
           </a>

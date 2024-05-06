@@ -1,3 +1,5 @@
+import { AppUrl } from "@/constants";
+
 export function AnnouncementBar() {
   return (
     <div className="hidden fixed bg-[#2d72d2] h-[32px] top-0 left-0 right-0 bg-blue-600 text-white px-4 md:flex items-center justify-center z-50 text-sm">
@@ -11,7 +13,7 @@ export function AnnouncementBar() {
         className={
           'bg-white px-[6px] py-[2px] rounded-md inline-block text-black leading-none text-[13px] ml-4 hover:underline'
         }
-        href="https://app.bigcapital.ly/auth/register"
+        href={AppUrl.SignUp}
       >
         Subscribe $29
       </a>

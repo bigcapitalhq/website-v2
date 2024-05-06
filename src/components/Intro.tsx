@@ -1,3 +1,4 @@
+import { AppUrl } from '@/constants';
 import Link from 'next/link';
 import React from 'react';
 
@@ -39,7 +40,7 @@ export default function Page() {
             className={
               'inline-block h-[44px] text-lg leading-[44px] rounded-full px-5 bg-indigo text-white hover:bg-indigo-dark w-full md:w-auto'
             }
-            href="https://app.bigcapital.ly/auth/register"
+            href={AppUrl.SignUp}
           >
             Start Accounting
           </Link>
