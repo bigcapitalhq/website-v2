@@ -73,7 +73,7 @@ function PagesWidget() {
         </li>
 
         <li className={'mb-2'}>
-          <a target="_blank" href="https://docs.bigcapital.ly">
+          <a target="_blank" href="https://docs.bigcapital.app">
             Documentation
           </a>
         </li>

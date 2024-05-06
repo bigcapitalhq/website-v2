@@ -142,7 +142,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
               </NavItem>
 
               <NavItem>
-                <NavLink href={'https://docs.bigcapital.ly'} target="_blank">
+                <NavLink href={'https://docs.bigcapital.app'} target="_blank">
                   Docs
                 </NavLink>
               </NavItem>
