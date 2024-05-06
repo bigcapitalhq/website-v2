@@ -137,7 +137,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
               </NavItem>
 
               <NavItem>
-                <NavLink href="#features">Features</NavLink>
+                <NavLink href="/blog">Blog</NavLink>
               </NavItem>
 
               <NavItem>

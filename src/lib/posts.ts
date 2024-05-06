@@ -110,7 +110,7 @@ export function getAllPostIds() {
 // --------------------------------
 // GET THE DATA OF A SINGLE POST FROM THE ID
 export async function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
+  const fullPath = path.join(postsDirectory, `early-adopter-plan.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   // Use gray-matter to parse the post metadata section
