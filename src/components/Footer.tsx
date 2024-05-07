@@ -105,9 +105,6 @@ export default function Footer() {
                   Online accounting software, built to automate business
                   financial processes.
                 </p>
-                <p className="mt-4">
-                  <strong>Email</strong>: ahmed@bigcapital.ly
-                </p>
               </div>
             </div>
           </div>
@@ -124,7 +121,7 @@ export default function Footer() {
       <div className="text-md text-white/50 tracking-tight text-center ">
         <div className="container mx-auto px-4.5">
           <div className="border-t border-white/20 pt-7 pb-7 ">
-            <p>Copyright © 2023 — Made by Bigcapital Technologies.</p>
+            <p>Copyright © 2024 — Made by Bigcapital Technologies.</p>
           </div>
         </div>
       </div>
