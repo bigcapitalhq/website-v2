@@ -78,6 +78,13 @@ function PagesWidget() {
           </a>
         </li>
 
+
+        <li className={'mb-2'}>
+          <a target="_blank" href="https://docs.bigcapital.app/roadmap">
+            Product Roadmap
+          </a>
+        </li>
+
         <li>
           <a target={'_blank'} href={'https://bigcapital.statuspage.io/'}>
             Status
