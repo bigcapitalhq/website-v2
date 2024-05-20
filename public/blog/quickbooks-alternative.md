@@ -1,5 +1,5 @@
 ---
-title: 'Bigcaptial - Open-source Alternative to QuickBooks'
+title: 'Bigcapital - Open-source Alternative to QuickBooks'
 subtitle: Modern, Open-Source and Self-hosted Core Accounting Software
 date: '2024-05-06'
 author: Ahmed Bouhuolia
