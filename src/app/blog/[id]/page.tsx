@@ -30,7 +30,7 @@ export default async function Page({ params }: PageProps) {
         </h1>
         <p
           className={
-            'animate__animated animate__fadeIn text-[1.2rem] text-[#6b7280]'
+            'animate__animated animate__fadeIn text-[1.1rem] md:text-[1.2rem] text-[#6b7280]'
           }
         >
           {postData.subtitle}
