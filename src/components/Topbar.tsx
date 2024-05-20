@@ -4,6 +4,8 @@ import Link from 'next/link';
 import clsx from 'classnames';
 import Logo from '../icons/Bigcapital';
 import { AppUrl } from '@/constants';
+import { usePathname } from 'next/navigation';
+import classNames from 'classnames';
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -91,10 +93,12 @@ interface TopBarProps {
  */
 export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
   const [toggle, setToggle] = useState<boolean>(false);
+  const pathname = usePathname();
 
   const handleLinkClick = (event: React.MouseEvent<HTMLDivElement>) => {
     // Check if the clicked element is a link
     const target = event.target as HTMLElement;
+
     if (target.tagName === 'A') {
       // Change the state when a link is clicked
       setToggle(false);
@@ -102,10 +106,15 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
   };
 
   return (
-    <div onClick={handleLinkClick}>
+    <div
+      className={classNames({
+        'border-b-[1px] border-[#EDEFF2]': pathname.indexOf('/blog') === 0,
+      })}
+      onClick={handleLinkClick}
+    >
       {beforeNavbar}
 
-      <div className="xl:container mx-auto px-4 mx-auto">
+      <div className={classNames('xl:container mx-auto px-4 mx-auto')}>
         <div className={'py-[14px] lg:flex lg:flex-nowrap'}>
           <div className={'flex lg:block'}>
             <div className={'py-[5px]'}>

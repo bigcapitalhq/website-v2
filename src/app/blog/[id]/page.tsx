@@ -2,8 +2,15 @@ import { getPostData } from '@/lib/posts';
 import Image from 'next/image';
 import './page.css';
 
-export default async function Page() {
-  const postData = await getPostData('ssg-ssr');
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default async function Page({ params }: PageProps) {
+  const { id } = params;
+  const postData = await getPostData(id);
 
   return (
     <div>
@@ -16,7 +23,7 @@ export default async function Page() {
       <div>
         <h1
           className={
-            'font-extrabold font-styling font-display mt-1.5 mb-2.5 text-[2rem] md:text-[2.2rem] tracking-tight leading-[120%] text-[#242c51] animate__animated animate__fadeIn'
+            'font-extrabold font-styling font-display mt-1.5 mb-2.5 text-[2rem] md:text-[2.5rem] tracking-tight leading-[120%] text-darkblue-800 animate__animated animate__fadeIn'
           }
         >
           {postData.title}
@@ -44,9 +51,7 @@ export default async function Page() {
               {postData.author}
             </span>
 
-            <span className={'text-xs muted text-[#6b7280]'}>
-              CEO, Founder
-            </span>
+            <span className={'text-xs muted text-[#6b7280]'}>CEO, Founder</span>
           </div>
         </div>
       </div>

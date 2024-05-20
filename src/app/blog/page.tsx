@@ -13,7 +13,7 @@ function Posts() {
   const posts = getSortedPostsData();
 
   return (
-    <div>
+    <div className={"container mx-auto px-4 pt-9 pb-20"}>
       <h1 className={'mb-10 text-3xl font-semibold'}>Blog</h1>
       <div className={'grid md:grid-cols-2 gap-6'}>
         {posts.map((post, index) => (
