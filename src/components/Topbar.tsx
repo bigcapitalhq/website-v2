@@ -108,7 +108,8 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
   return (
     <div
       className={classNames({
-        'border-b-[1px] border-[#EDEFF2]': pathname.indexOf('/blog') === 0,
+        'border-b-[1px] border-[#EDEFF2]':
+          pathname.indexOf('/blog') === 0 || pathname.indexOf('/updates') === 0,
       })}
       onClick={handleLinkClick}
     >
@@ -136,7 +137,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
             )}
           >
             <div className="flex flex-col lg:flex-row ml-auto items-stretch lg:items-center">
-              <NavItem className={'pb-2 lg:pb-0'}>
+              <NavItem className={'pb-2 lg:pb-0 mr-4'}>
                 <iframe
                   src="https://ghbtns.com/github-btn.html?user=bigcapitalhq&repo=bigcapital&type=star&size=large&count=true"
                   scrolling="0"
@@ -148,6 +149,10 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
 
               <NavItem>
                 <NavLink href="/blog">Blog</NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink href="/updates">Updates</NavLink>
               </NavItem>
 
               <NavItem>
@@ -173,6 +178,12 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
                 </a>
               </NavItem> */}
 
+              <div className="hidden lg:block lg:ml-4 d-lg-none">
+                <NavButton variant={'outline'} href={AppUrl.SignIn}>
+                  Sign In
+                </NavButton>
+              </div>
+
               <NavItem className={'hidden lg:block lg:ml-4'}>
                 <NavButton
                   className={'px-6'}
@@ -182,12 +193,6 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
                   Sign Up
                 </NavButton>
               </NavItem>
-
-              <div className="hidden lg:block lg:ml-4 d-lg-none">
-                <NavButton variant={'outline'} href={AppUrl.SignIn}>
-                  Sign In
-                </NavButton>
-              </div>
             </div>
           </div>
         </div>

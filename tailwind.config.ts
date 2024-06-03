@@ -47,7 +47,13 @@ const config: Config = {
     },
     container: {
       center: true,
-      padding: '20px',
+      padding: {
+        DEFAULT: '16px',
+        sm: '16px',
+        lg: '20px',
+        xl: '20px',
+        '2xl': '20px',
+      },
       screens: {
         sm: '960px',
         md: '960px',
