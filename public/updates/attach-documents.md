@@ -1,6 +1,6 @@
 ---
 title: 'Attach documents to your transactions'
-date: '2024-05-06'
+date: '2024-06-04'
 ---
 
 You can now upload and attach documents to any type of transaction like invoice, bill, expense, or even physical bank transaction, to retrieve the source documents easily later on, it's only visible to you and other users of your organization.
