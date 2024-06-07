@@ -20,5 +20,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+    {
+      url: 'https://docs.bigcapital.app/',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    }, 
+    {
+      url: 'https://bigcapital.app/blog/quickbooks-alternative',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    }, 
+    {
+      url: 'https://bigcapital.app/blog/early-adopter-plan',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },  
   ];
 }
+
+https://docs.bigcapital.app/roadmap
