@@ -29,7 +29,7 @@ function Feature({ icon, title, desc }: FeatureProps) {
 
 export function Features() {
   return (
-    <div
+    <section
       id={'features'}
       className={
         'bg-[#06091d] pt-[420px] pb-[40px] md:pb-[60px] text-white py-420 overflow-hidden'
@@ -117,6 +117,6 @@ export function Features() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

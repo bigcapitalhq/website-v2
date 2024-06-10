@@ -7,7 +7,7 @@ import React from 'react';
  */
 export default function Page() {
   return (
-    <div
+    <section
       className={
         'text-center py-[60px] md:py-[80px] animate__animated animate__fadeIn'
       }
@@ -56,6 +56,6 @@ export default function Page() {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
