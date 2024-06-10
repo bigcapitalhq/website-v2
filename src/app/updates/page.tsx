@@ -8,7 +8,7 @@ export default async function UpdatesPage() {
   return (
     <div>
       {updates.map((update, index) => (
-        <div
+        <article
           key={index}
           className="flex items-start md:flex-row flex-col gap-6 mb-16 pb-10 overflow-wrap border-b-[1px] border-[#E5E8EB] last:border-b-[0px]"
         >
@@ -25,7 +25,7 @@ export default async function UpdatesPage() {
               dangerouslySetInnerHTML={{ __html: update.content }}
             ></div>
           </div>
-        </div>
+        </article>
       ))}
     </div>
   );

@@ -78,7 +78,6 @@ function PagesWidget() {
           </a>
         </li>
 
-
         <li className={'mb-2'}>
           <a target="_blank" href="https://docs.bigcapital.app/roadmap">
             Product Roadmap
@@ -116,13 +115,13 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="ml-auto w-full lg:w-[60%]">
+          <nav className="ml-auto w-full lg:w-[60%]">
             <div className="flex flex-col md:flex-row flex-grow grow">
               <PagesWidget />
               <CompanyWidget />
               <SocialWidget />
             </div>
-          </div>
+          </nav>
         </div>
       </div>
       <div className="text-md text-white/50 tracking-tight text-center ">

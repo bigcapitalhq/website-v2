@@ -13,7 +13,7 @@ export default async function Page({ params }: PageProps) {
   const postData = await getPostData(id);
 
   return (
-    <div>
+    <article>
       <div
         className={'text-[#79818b] text-sm animate__animated animate__fadeIn'}
       >
@@ -74,6 +74,6 @@ export default async function Page({ params }: PageProps) {
         }
         dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
       ></div>
-    </div>
+    </article>
   );
 }

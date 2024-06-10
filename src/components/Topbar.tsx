@@ -106,7 +106,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
   };
 
   return (
-    <div
+    <nav
       className={classNames({
         'border-b-[1px] border-[#EDEFF2]':
           pathname.indexOf('/blog') === 0 || pathname.indexOf('/updates') === 0,
@@ -198,7 +198,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
         </div>
       </div>
       {afterNavbar}
-    </div>
+    </nav>
   );
 }
 
