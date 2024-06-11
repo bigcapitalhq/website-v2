@@ -27,6 +27,14 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
+        <meta
+          name="description"
+          content="Modern open-source accounting software for small businesses."
+        />
+        <meta
+          name="keywords"
+          content="Accounting, Small business, Financial statements, Reporting, Financial accounting, Inventory"
+        />
       </head>
       <body className={inter.className}>
         <header>
