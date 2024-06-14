@@ -3,6 +3,7 @@ const nextConfig = {
   images: {
     domains: ['gravatar.com'],
   },
+  swcMinify: true,
 };
 
 export default nextConfig;
