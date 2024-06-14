@@ -60,6 +60,7 @@ export const Carousel: React.FC<CarouselProps> = ({
               'box-content w-10 h-[5px] pr-1 pl-1 cursor-pointer relative bg-transparent py-4 ' +
               (currentIndex === index ? 'opacity-75' : 'opacity-30')
             }
+            aria-label={`Number #${index + 1}`}
           >
             <span className={'hidden'}>Number {index + 1}</span>
             <span className="block w-full h-full rounded-sm bg-white"></span>
