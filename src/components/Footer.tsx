@@ -102,9 +102,9 @@ export default function Footer() {
           <div className="w-full lg:w-[25%]">
             <div className="mb-[40px] md:mb-[60px]">
               <div className="mt-1 mb-6">
-                <a href="#">
+                <Link href="/" aria-label={'Bigcapital'}>
                   <BigcapitalAlt fill="#fff" width={180} className={'inline'} />
-                </a>
+                </Link>
               </div>
               <div className="footer-text mb-0 mt-3">
                 <p>

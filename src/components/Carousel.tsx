@@ -61,6 +61,7 @@ export const Carousel: React.FC<CarouselProps> = ({
               (currentIndex === index ? 'opacity-75' : 'opacity-30')
             }
           >
+            <span className={'hidden'}>Number {index + 1}</span>
             <span className="block w-full h-full rounded-sm bg-white"></span>
           </button>
         ))}

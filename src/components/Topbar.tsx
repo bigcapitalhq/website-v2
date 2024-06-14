@@ -119,7 +119,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
         <div className={'py-[14px] lg:flex lg:flex-nowrap'}>
           <div className={'flex lg:block'}>
             <div className={'py-[5px]'}>
-              <Link href={'/'}>
+              <Link href={'/'} aria-label='Bigcapital'>
                 <Logo width={200} />
               </Link>
             </div>
