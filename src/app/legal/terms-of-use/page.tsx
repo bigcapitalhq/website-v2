@@ -1,12 +1,13 @@
 import { getLegalContent } from '@/lib/legal';
+import '../legal-content.css';
 
 export default async function Page() {
   const content = await getLegalContent('terms-of-use');
 
   return (
-    <div className={'my-10'}>
-      <div className={'mb-8'}>
-        <h1 className="text-5xl font-bold ">Terms of Use</h1>
+    <div className={'my-20'}>
+      <div className={'mb-16'}>
+        <h1 className="text-5xl font-bold ">Bigcapital Legal Information</h1>
       </div>
 
       <div className={'max-w-3xl'}>
@@ -16,7 +17,10 @@ export default async function Page() {
           </h1>
         </div>
 
-        <div dangerouslySetInnerHTML={{ __html: content.contentHtml }} />
+        <div
+          className={'legal-content'}
+          dangerouslySetInnerHTML={{ __html: content.contentHtml }}
+        />
       </div>
     </div>
   );
