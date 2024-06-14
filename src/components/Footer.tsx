@@ -9,9 +9,9 @@ import BigcapitalAlt from '../icons/BigcapitalAlt';
 function SocialWidget() {
   return (
     <div className="grow mb-[40px] md:mb-[60px]">
-      <h5 className="text-white/70 font-medium text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
+      <h2 className="text-white/70 font-medium text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
         Socials
-      </h5>
+      </h2>
       <ul className="footer__widget-list">
         <li className={'mb-2'}>
           <a target="_blank" href="https://discord.gg/c8nPBJafeb">
@@ -41,9 +41,9 @@ function SocialWidget() {
 function CompanyWidget() {
   return (
     <div className="grow mb-[40px] md:mb-[60px]">
-      <h5 className="text-white/70text-opacity-75 font-medium text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
+      <h2 className="text-white/70text-opacity-75 font-medium text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
         Legal
-      </h5>
+      </h2>
       <ul className="footer__widget-list">
         <li className={'mb-2'}>
           <Link href={'/legal/terms-of-use'}>Terms & conditions</Link>
@@ -64,9 +64,9 @@ function CompanyWidget() {
 function PagesWidget() {
   return (
     <div className="grow mb-[40px] md:mb-[60px]">
-      <h5 className="text-white/70 font-medium text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
+      <h2 className="text-white/70 font-medium text-lg leading-6 tracking-tighter mb-[22px] mt-[2px]">
         Content
-      </h5>
+      </h2>
       <ul className="footer__widget-list">
         <li className={'mb-2'}>
           <Link href={'/'}>Home</Link>
