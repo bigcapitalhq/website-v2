@@ -3,7 +3,7 @@ import { getSortedUpdatesData } from '@/lib/updates';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Updates',
+  title: 'Updates | Bigcapital',
   description: 'A changelog of the latest updates',
 };
 

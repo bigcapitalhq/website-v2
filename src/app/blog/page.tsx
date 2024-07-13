@@ -1,6 +1,11 @@
 import { getSortedPostsData } from '@/lib/posts';
 import Image from 'next/image';
 
+export const metadata = {
+  title: 'Blog | Bigcapital',
+  description: 'Updates from the Bigcapital',
+};
+
 export default function BlogPage() {
   return (
     <div>
@@ -13,7 +18,7 @@ function Posts() {
   const posts = getSortedPostsData();
 
   return (
-    <div className={"container mx-auto px-4 pt-9 pb-20"}>
+    <div className={'container mx-auto px-4 pt-9 pb-20'}>
       <h1 className={'mb-10 text-3xl font-semibold'}>Blog</h1>
       <div className={'grid md:grid-cols-2 gap-6'}>
         {posts.map((post, index) => (

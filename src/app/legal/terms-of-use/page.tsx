@@ -2,7 +2,7 @@ import { getLegalContent } from '@/lib/legal';
 import '../legal-content.css';
 
 export const metadata = {
-  title: 'Terms of Use',
+  title: 'Terms of Use | Bigcapital',
   description: 'Legal information',
 };
 

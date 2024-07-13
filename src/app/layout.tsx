@@ -12,6 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Bigcapital | Modern core accounting software',
+  description: 'Modern open-source accounting software for small businesses.',
 };
 
 export default function RootLayout({
@@ -28,12 +29,8 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
         <meta
-          name="description"
-          content="Modern open-source accounting software for small businesses."
-        />
-        <meta
           name="keywords"
-          content="Accounting, Small business, Financial statements, Reporting, Financial accounting, Inventory"
+          content="Accounting, Open Source, Small business, Financial statements, Reporting, Financial accounting, Inventory"
         />
       </head>
       <body className={inter.className}>

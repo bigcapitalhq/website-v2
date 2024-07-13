@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: PageProps) {
   const postData = await getUpdateData(id);
 
   return {
-    title: postData.title,
+    title: `${postData.title} | Bigcapital`,
   };
 }
 
