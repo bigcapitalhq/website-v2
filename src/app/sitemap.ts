@@ -25,18 +25,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
-    }, 
+    },
     {
       url: 'https://bigcapital.app/blog/quickbooks-alternative',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
-    }, 
+    },
     {
       url: 'https://bigcapital.app/blog/early-adopter-plan',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
-    },  
+    },
+    {
+      url: 'http://localhost:3000/updates/bank-rules',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: 'http://localhost:3000/updates/attach-documents',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
   ];
 }

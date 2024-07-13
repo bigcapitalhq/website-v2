@@ -126,22 +126,17 @@ export async function getUpdateData(id: string) {
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
-  const avatar = getAvatar(matterResult.data?.authorEmail);
   const formattedDate = formatDate(matterResult.data?.date);
 
   // Combine the data with the id
   return {
     id,
     contentHtml,
-    avatar,
     formattedDate,
     ...(matterResult.data as {
       date: string;
       title: string;
       subtitle: string;
-      author: string;
-      authoriEmail: string;
-      picture: string;
     }),
   };
 }

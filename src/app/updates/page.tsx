@@ -22,9 +22,11 @@ export default async function UpdatesPage() {
           </div>
 
           <div className="max-w-[588px]">
-            <h1 className="text-[22px] md:text-2xl font-semibold tracking-[-0.5px] mb-4 md:mb-5 text-darkblue-700">
-              {update.title}
-            </h1>
+            <a href={`/updates/${update.id}`}>
+              <h1 className="text-[22px] md:text-2xl font-semibold tracking-[-0.5px] mb-4 md:mb-5 text-darkblue-700">
+                {update.title}
+              </h1>
+            </a>
             <div
               className={clsx('text-[15px] leading-6', styles.content)}
               dangerouslySetInnerHTML={{ __html: update.content }}
