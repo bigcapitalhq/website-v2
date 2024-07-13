@@ -8,6 +8,16 @@ interface PageProps {
   };
 }
 
+export async function generateMetadata({ params }: PageProps) {
+  const { id } = params;
+  const postData = await getPostData(id);
+
+  return {
+    title: postData.title,
+    description: postData.subtitle || '',
+  };
+}
+
 export default async function Page({ params }: PageProps) {
   const { id } = params;
   const postData = await getPostData(id);
