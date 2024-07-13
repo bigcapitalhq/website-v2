@@ -1,6 +1,6 @@
 import clsx from 'classnames';
 import { getSortedUpdatesData } from '@/lib/updates';
-import './page.css';
+import styles from './page.module.css';
 
 export const metadata = {
   title: 'Updates',
@@ -26,7 +26,7 @@ export default async function UpdatesPage() {
               {update.title}
             </h1>
             <div
-              className={clsx('text-[15px] leading-6 content')}
+              className={clsx('text-[15px] leading-6', styles.content)}
               dangerouslySetInnerHTML={{ __html: update.content }}
             ></div>
           </div>
