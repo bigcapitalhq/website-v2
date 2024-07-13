@@ -2,6 +2,11 @@ import clsx from 'classnames';
 import { getSortedUpdatesData } from '@/lib/updates';
 import './page.css';
 
+export const metadata = {
+  title: 'Updates',
+  description: 'A changelog of the latest updates',
+};
+
 export default async function UpdatesPage() {
   const updates = await getSortedUpdatesData();
 

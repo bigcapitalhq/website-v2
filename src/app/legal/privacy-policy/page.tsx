@@ -1,6 +1,11 @@
 import { getLegalContent } from '@/lib/legal';
 import '../legal-content.css';
 
+export const metadata = {
+  title: 'Privacy Policy',
+  description: 'Legal information',
+};
+
 export default async function Page() {
   const content = await getLegalContent('privacy-policy');
   return (
