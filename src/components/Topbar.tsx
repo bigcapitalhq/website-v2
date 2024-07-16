@@ -109,7 +109,9 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
     <nav
       className={classNames({
         'border-b-[1px] border-[#EDEFF2]':
-          pathname.indexOf('/blog') === 0 || pathname.indexOf('/updates') === 0,
+          pathname.indexOf('/blog') === 0 ||
+          pathname.indexOf('/updates') === 0 ||
+          pathname.indexOf('/oss-friends') === 0,
       })}
       onClick={handleLinkClick}
     >
@@ -119,7 +121,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
         <div className={'py-[14px] lg:flex lg:flex-nowrap'}>
           <div className={'flex lg:block'}>
             <div className={'py-[5px]'}>
-              <Link href={'/'} aria-label='Bigcapital'>
+              <Link href={'/'} aria-label="Bigcapital">
                 <Logo width={200} />
               </Link>
             </div>
@@ -162,7 +164,10 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
               </NavItem>
 
               <NavItem>
-                <NavLink href={'https://discord.gg/c8nPBJafeb'} target="_blank">
+                <NavLink
+                  href={'https://community.bigcapital.app'}
+                  target="_blank"
+                >
                   Community
                 </NavLink>
               </NavItem>
