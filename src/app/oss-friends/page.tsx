@@ -8,7 +8,7 @@ export const metadata = {
 
 export default async function OSSFriendsPage() {
   return (
-    <div className={'grid-cols-3 grid gap-3 grid-flow-rows'}>
+    <div className={'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 grid-flow-rows'}>
       {Friends.map((friend, index) => (
         <div
           key={index}
