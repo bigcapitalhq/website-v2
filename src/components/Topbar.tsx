@@ -165,7 +165,7 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
 
               <NavItem>
                 <NavLink
-                  href={'https://community.bigcapital.app'}
+                  href={'https://discord.gg/c8nPBJafeb'}
                   target="_blank"
                 >
                   Community
