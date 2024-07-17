@@ -7,7 +7,7 @@ export function AnnouncementBar() {
         New
       </span>
       {
-        "We've launched the Bigcapital Cloud, the 200 early adopters will get all the features access and unlimited users."
+        "We've launched new subscription plans starting at just $10 for an organization. Pay only for what you truly need."
       }
       <a
         className={
@@ -15,7 +15,7 @@ export function AnnouncementBar() {
         }
         href={AppUrl.SignUp}
       >
-        Subscribe $29
+        Subscribe $10
       </a>
     </div>
   );
