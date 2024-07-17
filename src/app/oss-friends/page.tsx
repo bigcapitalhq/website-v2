@@ -1,97 +1,10 @@
-import { describe } from 'node:test';
+import { Friends } from './_constants';
 
 export const metadata = {
   title: 'OSS Friends | Bigcapital',
   description:
     'We are proud to collaborate with a diverse group of partners to promote open-source software.',
 };
-
-const Friends = [
-  {
-    name: 'BoxyHQ',
-    description:
-      'BoxyHQ’s suite of APIs for security and privacy helps engineering teams build and ship compliant cloud applications faster.',
-    href: 'http://google.com',
-    hrefLabel: 'Visit Google',
-  },
-  {
-    name: 'Cal.com',
-    description:
-      'Cal.com is a scheduling tool that helps you schedule meetings without the back-and-forth emails.',
-    href: 'http://google.com',
-    hrefLabel: 'Visit Google',
-  },
-  {
-    name: 'ClassroomIO',
-    description:
-      'ClassroomIO is a no-code tool that allows you build and scale your own teaching platform with ease.',
-    href: 'http://google.com',
-    hrefLabel: 'Visit Google',
-  },
-  {
-    name: 'BoxyHQ',
-    description:
-      'BoxyHQ’s suite of APIs for security and privacy helps engineering teams build and ship compliant cloud applications faster.',
-    href: 'http://google.com',
-    hrefLabel: 'Visit Google',
-  },
-  {
-    name: 'Cal.com',
-    description:
-      'Cal.com is a scheduling tool that helps you schedule meetings without the back-and-forth emails.',
-    href: 'http://google.com',
-    hrefLabel: 'Visit Google',
-  },
-  {
-    name: 'ClassroomIO',
-    description:
-      'ClassroomIO is a no-code tool that allows you build and scale your own teaching platform with ease.',
-    href: 'http://google.com',
-    hrefLabel: 'Visit Google',
-  },
-  {
-    name: 'BoxyHQ',
-    description:
-      'BoxyHQ’s suite of APIs for security and privacy helps engineering teams build and ship compliant cloud applications faster.',
-    href: 'http://google.com',
-    hrefLabel: 'Visit Google',
-  },
-  {
-    name: 'Cal.com',
-    description:
-      'Cal.com is a scheduling tool that helps you schedule meetings without the back-and-forth emails.',
-    href: 'http://google.com',
-    hrefLabel: 'Visit Google',
-  },
-  {
-    name: 'ClassroomIO',
-    description:
-      'ClassroomIO is a no-code tool that allows you build and scale your own teaching platform with ease.',
-    href: 'http://google.com',
-    hrefLabel: 'Visit Google',
-  },
-  {
-    name: 'BoxyHQ',
-    description:
-      'BoxyHQ’s suite of APIs for security and privacy helps engineering teams build and ship compliant cloud applications faster.',
-    href: 'http://google.com',
-    hrefLabel: 'Visit Google',
-  },
-  {
-    name: 'Cal.com',
-    description:
-      'Cal.com is a scheduling tool that helps you schedule meetings without the back-and-forth emails.',
-    href: 'http://google.com',
-    hrefLabel: 'Visit Google',
-  },
-  {
-    name: 'ClassroomIO',
-    description:
-      'ClassroomIO is a no-code tool that allows you build and scale your own teaching platform with ease.',
-    href: 'http://google.com',
-    hrefLabel: 'Visit Google',
-  },
-];
 
 export default async function OSSFriendsPage() {
   return (

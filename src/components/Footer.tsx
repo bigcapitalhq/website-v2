@@ -133,7 +133,7 @@ function PagesWidget() {
           </a>
         </li>
 
-        <li className={'mb-3'}>
+        <li>
           <a
             target={'_blank'}
             href={'https://bigcapital.statuspage.io/'}
@@ -143,14 +143,14 @@ function PagesWidget() {
           </a>
         </li>
 
-        <li>
+        {/* <li>
           <a
             href={'/oss-friends'}
             className={'hover:text-white transition-colors'}
           >
             OSS Friends
           </a>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

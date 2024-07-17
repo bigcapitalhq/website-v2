@@ -39,13 +39,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: 'http://localhost:3000/updates/bank-rules',
+      url: 'https://bigcapital.app/updates/bank-rules',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
     },
     {
-      url: 'http://localhost:3000/updates/attach-documents',
+      url: 'https://bigcapital.app/updates/attach-documents',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: 'https://bigcapital.app/oss-friends',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,

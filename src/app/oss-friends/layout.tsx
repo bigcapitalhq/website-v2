@@ -29,9 +29,9 @@ export default function OssFriendsLayout({ children }: OssFriendsLayoutProps) {
         </h1>
 
         <p className={'text-lg text-[#404854]'}>
-          In Novu, we are proud to collaborate with a diverse group of partners
-          to promote open-source software and the values of transparency,
-          collaboration, and community that it represents.
+          In Bigcapital, we are proud to partner with a diverse group of
+          partners to promote open-source software and uphold the values of
+          collaboration, transparency, and community.
         </p>
       </div>
 
