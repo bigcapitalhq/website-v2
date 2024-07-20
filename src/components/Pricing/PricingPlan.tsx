@@ -15,9 +15,10 @@ export const PricingPlan = ({ featured, children }: PricingPlanProps) => {
   return (
     <div
       className={clsx(
-        'border-[1px] border-[#C5CBD3] p-4 rounded-md relative pt-12 pb-8',
+        'border-[1px] border-[#C5CBD3] p-4 rounded-md relative pb-8',
         {
           'bg-[#f5f6f8] border-[#f5f6f8] pt-12': featured,
+          'pt-6 md:pt-12': !featured
         }
       )}
     >
@@ -157,7 +158,7 @@ const FeatureLine = ({
   hintLabel,
 }: PricingFeatureLineProps) => {
   return (
-    <div className="text-sm flex gap-2 text-black">
+    <div className="text-md md:text-sm items-center flex gap-2 text-black">
       <CheckCircled />
       <div className={''}>{children}</div>
     </div>
