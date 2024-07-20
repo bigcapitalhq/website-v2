@@ -13,7 +13,7 @@ export function AnnouncementBar() {
         className={
           'hidden md:inline-block bg-white px-[6px] py-[2px] rounded-md inline-block text-black leading-none text-[13px] ml-2 hover:underline'
         }
-        href={AppUrl.SignUp}
+        href={AppUrl.Pricing}
       >
         Subscribe $10
       </a>
