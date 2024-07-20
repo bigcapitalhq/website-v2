@@ -58,7 +58,7 @@ function Plan({ plan }: SubscriptionPlanProps) {
   const { isAnnually } = usePricingContext();
 
   const handleBuyBtnClick = () => {
-    router.push(AppUrl.BigcapitapApp);
+    router.push(AppUrl.SignUp);
   };
 
   return (

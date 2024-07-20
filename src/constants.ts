@@ -4,5 +4,5 @@ export const AppUrl = {
   SignUp: `${AppRootUrl}/auth/register`,
   SignIn: `${AppRootUrl}/auth/login`,
   Pricing: '/pricing',
-  BigcapitapApp: 'https://app.bigcapital.app'
+  BigcapitapApp: 'https://my.bigcapital.app'
 };
