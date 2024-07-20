@@ -154,6 +154,10 @@ export function TopBar({ beforeNavbar, afterNavbar }: TopBarProps) {
               </NavItem>
 
               <NavItem>
+                <NavLink href={"/pricing"}>Pricing</NavLink>
+              </NavItem>
+
+              <NavItem>
                 <NavLink href="/updates">Updates</NavLink>
               </NavItem>
 

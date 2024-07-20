@@ -5,7 +5,7 @@ import { Carousel } from './Carousel';
 
 function ShowcaseCarousel() {
   return (
-    <Carousel>
+  <Carousel>
       <ShowcaseBrowser>
         <Image
           src="/showcase/showcase-3.png"
