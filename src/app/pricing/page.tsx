@@ -17,7 +17,7 @@ export default async function PricingPage() {
               'text-3xl md:text-4xl font-extrabold tracking-tight text-darkblue-700'
             }
           >
-            Make teamwork more productive
+            Make accounting more seamless
           </h1>
 
           <p className="mt-2">
