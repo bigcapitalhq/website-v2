@@ -42,7 +42,7 @@ export default function Page() {
             }
             href={AppUrl.SignUp}
           >
-            Start Accounting
+            Free 14-day trial
           </Link>
 
           <Link

@@ -1,4 +1,4 @@
-import { AppUrl } from "@/constants";
+import { AppUrl } from '@/constants';
 
 export function AnnouncementBar() {
   return (
@@ -15,7 +15,7 @@ export function AnnouncementBar() {
         }
         href={AppUrl.Pricing}
       >
-        Subscribe $10
+        Start free trial
       </a>
     </div>
   );

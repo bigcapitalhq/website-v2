@@ -14,7 +14,7 @@ export function CTASection() {
             className="w-full md:w-auto inline-block h-[44px] text-lg leading-[44px] rounded-full px-10 bg-indigo text-white hover:bg-indigo-dark"
             href={AppUrl.SignUp}
           >
-            Start Accounting
+            Start your 14-day free trial
           </a>
         </div>
       </div>
