@@ -133,7 +133,7 @@ function PagesWidget() {
           </a>
         </li>
 
-        <li>
+        <li className={'mb-3'}>
           <a
             target={'_blank'}
             href={'https://bigcapital.statuspage.io/'}
