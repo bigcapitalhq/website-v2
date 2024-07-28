@@ -28,6 +28,11 @@ export default async function PricingPage() {
 
         <div>
           <PricingPlans />
+
+          <p className={'mt-7 text-sm text-[#404854] text-center'}>
+            * All annual plans come with a 30-day money-back guarantee, no
+            questions asked.
+          </p>
         </div>
       </div>
 

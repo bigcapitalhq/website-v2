@@ -14,7 +14,7 @@ const PricingContext = createContext<PricingContextValue>(
 );
 
 export function PricingProvider({ children }: PricingProviderProp) {
-  const [isAnnually, setIsAnnually] = useState<boolean>(false);
+  const [isAnnually, setIsAnnually] = useState<boolean>(true);
 
   return (
     <PricingContext.Provider value={{ isAnnually, setIsAnnually }}>

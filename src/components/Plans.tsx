@@ -17,15 +17,16 @@ interface PricingPlansPeriodSwitchProps {
 function PricingPlansPeriodSwitch({
   className,
 }: PricingPlansPeriodSwitchProps) {
-  const { setIsAnnually } = usePricingContext();
+  const { setIsAnnually, isAnnually } = usePricingContext();
 
   const handleCheckoutChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsAnnually(event.currentTarget.checked);
   };
   return (
     <PricingPeriodSwitch
-      className={className}
+      value={isAnnually}
       onChange={handleCheckoutChange}
+      className={className}
     />
   );
 }
