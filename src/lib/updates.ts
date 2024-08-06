@@ -31,7 +31,7 @@ const formatDate = (date: string) => {
   ]
 */
 
-export async  function getSortedUpdatesData() {
+export async function getSortedUpdatesData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory); // [ 'pre-rendering.md', 'ssg-ssr.md' ]
 
@@ -71,7 +71,10 @@ export async  function getSortedUpdatesData() {
 
   // Sort posts by date and return
   return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
+    const aDateValue = dayjs(a.date).valueOf();
+    const bDateValue = dayjs(a.date).valueOf();
+
+    if (aDateValue < bDateValue) {
       return 1;
     } else {
       return -1;
