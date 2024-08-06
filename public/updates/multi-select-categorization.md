@@ -1,6 +1,6 @@
 ---
 title: 'Multi-select transactions categorization'
-date: '2024-07-06'
+date: '2024-08-06'
 ---
 
 Today, we are excited to announce a major release with significant improvements to our banking service. One of the most important features is the ability to categorize or match multiple bank transactions with a single Bigcapital transaction at once.
