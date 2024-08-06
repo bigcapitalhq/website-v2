@@ -9,6 +9,7 @@ import {
 } from './Pricing/PricingPlansProvider';
 import { AnnualDiscountTag } from './Pricing/AnnualDiscountTag';
 import { AppUrl } from '@/constants';
+import { SVGProps } from 'react';
 
 interface PricingPlansPeriodSwitchProps {
   className?: string;
@@ -34,6 +35,17 @@ function PricingPlansPeriodSwitch({
 export function PricingPlans() {
   return (
     <PricingProvider>
+      <div className="text-center mb-[14px]">
+        <span className="inline-flex text-sm mr-4 text-[#00824d]">
+          <CheckIcon fill="rgb(0, 130, 77)" className="mr-[2px]" /> 14-day free
+          trial
+        </span>
+
+        <span className="inline-flex text-sm text-[#00824d]">
+          <CheckIcon fill="rgb(0, 130, 77)" className="mr-[2px]" /> 24/7 online
+          support
+        </span>
+      </div>
       <div className={'mb-8 text-center'}>
         <PricingPlansPeriodSwitch className="align-middle" />
         <AnnualDiscountTag className={'ml-4 align-middle'}>
@@ -64,7 +76,7 @@ function Plan({ plan }: SubscriptionPlanProps) {
 
   return (
     <PricingPlan featured={plan.featured}>
-      {plan.featured && <PricingPlan.Featured>Most Value</PricingPlan.Featured>}
+      {plan.featured && <PricingPlan.Featured>Best Value</PricingPlan.Featured>}
       <PricingPlan.Header label={plan.name} description={plan.description} />
       {!isAnnually ? (
         <PricingPlan.Price
@@ -81,7 +93,7 @@ function Plan({ plan }: SubscriptionPlanProps) {
         featured={plan.featured}
         onClick={handleBuyBtnClick}
       >
-        Subscribe
+        Get Started
       </PricingPlan.BuyButton>
       <PricingPlan.Features>
         {plan.features.map((feature, featureIndex) => (
@@ -91,5 +103,20 @@ function Plan({ plan }: SubscriptionPlanProps) {
         ))}
       </PricingPlan.Features>
     </PricingPlan>
+  );
+}
+
+interface CheckIconProps extends SVGProps<SVGSVGElement> {}
+function CheckIcon({ ...props }: CheckIconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="18px"
+      width="18px"
+      viewBox="0 -960 960 960"
+      {...props}
+    >
+      <path d="M378-225 133-470l66-66 179 180 382-382 66 65-448 448Z"></path>
+    </svg>
   );
 }
