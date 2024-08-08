@@ -51,6 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: 'https://bigcapital.app/updates/multi-select-categorization',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
       url: 'https://bigcapital.app/oss-friends',
       lastModified: new Date(),
       changeFrequency: 'weekly',
