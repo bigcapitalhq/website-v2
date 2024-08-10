@@ -48,6 +48,7 @@ export default function RootLayout({
         {process.env.NODE_ENV === 'production' && <FacebookPixel />}
         {process.env.NODE_ENV === 'production' && <GoogleAnalytics />}
         {process.env.NODE_ENV === 'production' && <HotjarScript />}
+        {process.env.NODE_ENV === 'production' && <SchemakitScript />}
       </body>
     </html>
   );
@@ -119,4 +120,8 @@ function HotjarScript() {
       }}
     />
   );
+}
+
+function SchemakitScript() {
+  return <script defer src="https://schemakit.ai/e.js"></script>;
 }
