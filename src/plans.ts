@@ -45,9 +45,9 @@ export const SubscriptionPlans = [
       },
       { text: 'Unlimited User Seats' },
     ],
-    monthlyPrice: '$10',
+    monthlyPrice: '$20',
     monthlyPriceLabel: 'Per month',
-    annuallyPrice: '$7.5',
+    annuallyPrice: '$15',
     annuallyPriceLabel: 'Per month',
   },
   {
@@ -76,9 +76,9 @@ export const SubscriptionPlans = [
       { text: 'Smart Financial Reports' },
       { text: 'Advanced Inventory Reports' },
     ],
-    monthlyPrice: '$20',
+    monthlyPrice: '$40',
     monthlyPriceLabel: 'Per month',
-    annuallyPrice: '$15',
+    annuallyPrice: '$30',
     annuallyPriceLabel: 'Per month',
   },
   {
@@ -96,16 +96,17 @@ export const SubscriptionPlans = [
       },
       { text: 'Analysis Cost Center' },
     ],
-    monthlyPrice: '$25',
+    monthlyPrice: '$55',
     monthlyPriceLabel: 'Per month',
-    annuallyPrice: '$19',
+    annuallyPrice: '$40',
     annuallyPriceLabel: 'Per month',
     featured: true,
   },
   {
     name: 'Capital Big',
     slug: 'essentials',
-    description: 'Good for scaling businesses want track transcations on multiple branches and stocks.',
+    description:
+      'Good for scaling businesses want track transcations on multiple branches and stocks.',
     features: [
       { text: 'All Capital Plus features' },
       {
@@ -119,9 +120,9 @@ export const SubscriptionPlans = [
         hint: 'Track the organization inventory in multiple warehouses and transfer goods between them.',
       },
     ],
-    monthlyPrice: '$40',
+    monthlyPrice: '$60',
     monthlyPriceLabel: 'Per month',
-    annuallyPrice: '$30',
+    annuallyPrice: '$45',
     annuallyPriceLabel: 'Per month',
   },
 ] as SubscriptionPlan[];
