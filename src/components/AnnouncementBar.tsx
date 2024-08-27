@@ -7,15 +7,15 @@ export function AnnouncementBar() {
         New
       </span>
       {
-        "We've launched new subscription plans starting at just $10 for an organization. Pay only for what you truly need."
+        "We’re excited to announce that Bigcapital is officially live on Product Hunt! Your feedback means the world to us!"
       }
       <a
         className={
           'hidden md:inline-block bg-white px-[6px] py-[2px] rounded-md inline-block text-black leading-none text-[13px] ml-2 hover:underline'
         }
-        href={AppUrl.Pricing}
+        href={AppUrl.Producthunt}
       >
-        Start free trial
+        Discount 50%
       </a>
     </div>
   );
