@@ -1,10 +1,7 @@
 import { CTASection } from '@/components/CTA';
 import { Features } from '@/components/Features';
-import Footer from '@/components/Footer';
 import Intro from '@/components/Intro';
-import { StickyProducthuntBadge } from '@/components/ProducthuntBadge';
 import { Showcase } from '@/components/Showcase';
-import ReactWOW from 'react-wow';
 
 export default function Home() {
   return (
@@ -13,7 +10,6 @@ export default function Home() {
       <Showcase />
       <Features />
       <CTASection />
-      <StickyProducthuntBadge />
     </main>
   );
 }
