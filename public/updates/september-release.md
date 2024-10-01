@@ -3,9 +3,9 @@ title: 'Invoice PDF Template Customization'
 date: '2024-10-01'
 ---
 
-Welcome to the October release of Bigcapital, Today we’re super excited to release new major features that many customers have been waiting for, one of highighted feature is **the invoice PDF customization**.
+Welcome to the September release of Bigcapital, Today we’re super excited to release new major features that many customers have been waiting for, one of highighted feature is **the invoice PDF customization**.
 
-With Bigcapital's October release, users can now customize their invoice, estimate, receipt, credit note, or payment receipt to better align with their brand identity and business needs. This allows businesses to change primary or secondary colors, add their company logo, change label text, or even hidding some items from PDF documents you don’t want to show them to the customer.
+With Bigcapital's September release, users can now customize their invoice, estimate, receipt, credit note, or payment receipt to better align with their brand identity and business needs. This allows businesses to change primary or secondary colors, add their company logo, change label text, or even hidding some items from PDF documents you don’t want to show them to the customer.
 
 You can easily add multiple invoice templates for different scenarios, such as different payment terms or logos. There’s no limit to how many standard invoice templates you can create.
 
