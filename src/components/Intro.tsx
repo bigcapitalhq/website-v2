@@ -55,6 +55,22 @@ export default function Page() {
             Self Host
           </Link>
         </div>
+
+        {/* <div className={'mb4'}>
+          <a
+            href="https://www.producthunt.com/posts/bigcapital?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_souce=badge-bigcapital"
+            target="_blank"
+            className={'display-inline'}
+          >
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=481388&amp;theme=neutral"
+              alt="Bigcapital - Modern, open-source core accounting software  | Product Hunt"
+              style={{ width: '250px', height: '54px;' }}
+              width="250"
+              height="54"
+            />
+          </a>
+        </div> */}
       </div>
     </section>
   );
