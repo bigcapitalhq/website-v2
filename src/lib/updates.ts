@@ -72,13 +72,9 @@ export async function getSortedUpdatesData() {
   // Sort posts by date and return
   return allPostsData.sort((a, b) => {
     const aDateValue = dayjs(a.date).valueOf();
-    const bDateValue = dayjs(a.date).valueOf();
+    const bDateValue = dayjs(b.date).valueOf();
 
-    if (aDateValue < bDateValue) {
-      return 1;
-    } else {
-      return -1;
-    }
+    return bDateValue - aDateValue;
   });
 }
 
