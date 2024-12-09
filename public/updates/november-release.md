@@ -3,7 +3,7 @@ title: 'Improved Estimate, Receipt and Payment Mail Receipts'
 date: '2024-12-9'
 ---
 
-[Last update](/updates/october-release), we've made tremendius improvement to invoice mail receipt, in this update we scaled up these improvements to other services estimates, receipts, credit notes and payment received transactions.
+[Last update](/updates/october-release), we've made tremendous improvements to invoice mail receipt, in this update we expanded these improvements to other services estimates, receipts, credit notes and payment received transactions.
 
 ![Send estimate mail](/images/updates/november/estimate-mail.png 'Send estimate mail')
 
